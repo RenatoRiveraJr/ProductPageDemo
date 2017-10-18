@@ -1,0 +1,19 @@
+body {
+	font-family: raleway;
+	font-weight: 700;
+}
+.logo-main {
+	width: 150px;
+}
+
+.navbar {
+
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("/images/hamburger.svg");
+}
+
+.nav-item {
+	margin: 0 4em;
+}
