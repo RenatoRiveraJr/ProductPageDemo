@@ -1,4 +1,6 @@
+
 <?php include("productDatabase.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +24,7 @@
     <div class="container">
       <div class="row h-100 justify-content-center">
         <div class="col-sm-1"></div>
-        <div class="logo-main col-6 col-sm-10 my-3 text-center p-2"><a ref="#">
+        <div class="logo-main col-6 col-sm-10 my-3 text-center p-2"><a href="">
             <img src="images/cclogo.png" width="150px"  alt="CassieCreates">
           </a></div>
         <div class="col-6 col-sm-1 my-auto text-right"><a href="cart.php">
@@ -30,9 +32,6 @@
           </a></div>
       </div>
 	  </div>
-
-  
-
 
     <nav class="navbar navbar-expand-md navbar-light">
       <button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,40 +41,19 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link active text-center" href="index.php">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link text-center" href="#">About</a>
-          <a class="nav-item nav-link text-center" href="#">Products</a>
+          <a class="nav-item nav-link text-center" href="productpage.php">Products</a>
           <a class="nav-item nav-link text-center" href="#">Gallery</a>
         </div>
       </div>
     </nav>
-
-
-    <div class="container">
-      <?php 
-      for ($x = 0; $x <= 25; $x++) {?>
-        <?php
-          if ($x % 3 == 0) {
-              echo '<div class="row">';
-          }
-        ?>
-      
-          <div class="col-sm-12 col-lg-4">
-            <div class="card mx-auto" style="width: 20rem;">
-              <img class="card-img-top" height="300px" src="images/product<?php echo $products[$x]->getProductID();?>.jpg" alt="Card image cap">
-              <div class="card-body">
-                <a href="product<?php echo $products[$x]->getProductID();?>.html"><h4 class="card-title"><?php echo $products[$x]->getProductName();?></h4></a>
-                <p class="card-text">$<?php echo $products[$x]->getProductCost();?></p>
-                <a href="cart.php?id=<?php echo $products[$x]->getProductID();?>" class="btn btn-primary">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-      <?php
-          if ($x % 3 == 2) {
-              echo '</div>';
-          }
-        ?>
-      <?php
-      }
-      ?>
-    </div>
+		<div class="jumbotron">
+		  <h1 class="display-3">Hey, Everyone!</h1>
+		  <p class="lead">Welcome to my humble arts and crafts store. I create custom signage and boards, in addition to calligraphy for events of all kinds.</p>
+		  <hr class="my-4">
+		  <p>I've a lot of personalized products coming, but in the mean time check out my store</p>
+		  <p class="lead">
+		    <a class="btn btn-primary btn-lg" href="productpage.php" role="button">Products</a>
+		  </p>
+		</div>
   </body>
 </html>
